@@ -1,6 +1,6 @@
 
 import requests
-from database.local_db import insert_report, get_unsynced_reports, mark_as_synced
+from app.database.local_db import insert_report, get_unsynced_reports, mark_as_synced
 
 API_URL = "http://127.0.0.1:8000/api/report"
 

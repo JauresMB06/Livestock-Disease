@@ -1,0 +1,80 @@
+========================================
+QUICK START GUIDE - RUNNING THE SERVER
+========================================
+
+METHOD 1: Double-Click (Easiest)
+---------------------------------
+1. Navigate to: C:\Users\GENERAL-STORES\Desktop\Livestock-Disease
+2. Double-click: START_SERVER.bat
+3. Server will start automatically!
+
+
+METHOD 2: Command Prompt
+-------------------------
+1. Open Command Prompt (Windows Key + R, type "cmd", press Enter)
+2. Copy and paste these commands ONE BY ONE:
+
+   cd C:\Users\GENERAL-STORES\Desktop\Livestock-Disease
+   python -m uvicorn app.main:app --reload
+
+3. Press Enter after each command
+4. Wait for "Application startup complete" message
+
+
+METHOD 3: PowerShell
+---------------------
+1. Open PowerShell
+2. Copy and paste:
+
+   cd C:\Users\GENERAL-STORES\Desktop\Livestock-Disease
+   python -m uvicorn app.main:app --reload
+
+
+METHOD 4: Git Bash
+------------------
+1. Open Git Bash
+2. Copy and paste:
+
+   cd /c/Users/GENERAL-STORES/Desktop/Livestock-Disease
+   python -m uvicorn app.main:app --reload
+
+
+WHAT YOU SHOULD SEE:
+-------------------
+INFO:     Uvicorn running on http://127.0.0.1:8000
+INFO:     Started reloader process
+INFO:     Started server process
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+
+
+TEST THE SERVER:
+----------------
+1. Open your web browser
+2. Go to: http://127.0.0.1:8000
+3. You should see: {"message":"LDSN API is running"}
+
+OR go to: http://127.0.0.1:8000/docs
+to see the interactive API documentation
+
+
+TO STOP THE SERVER:
+-------------------
+Press CTRL + C in the terminal
+
+
+TROUBLESHOOTING:
+----------------
+If you get "python is not recognized":
+  - Make sure Python is installed
+  - Try: py -m uvicorn app.main:app --reload
+
+If you get "No module named 'fastapi'":
+  - Run: pip install fastapi uvicorn
+
+If you get "No module named 'app'":
+  - Make sure you're in the Livestock-Disease folder
+  - Check with: dir (should see 'app' folder)
+
+If port 8000 is busy:
+  - Use: python -m uvicorn app.main:app --reload --port 8001

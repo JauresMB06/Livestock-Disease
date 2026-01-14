@@ -1,0 +1,62 @@
+========================================
+QUICK CLI COMMANDS REFERENCE
+========================================
+
+STEP 1: Open Terminal
+---------------------
+- Press Windows Key + R
+- Type: cmd
+- Press Enter
+
+STEP 2: Navigate to Project
+----------------------------
+cd C:\Users\GENERAL-STORES\Desktop\Livestock-Disease
+
+STEP 3: Run Commands
+--------------------
+
+1. SEARCH CLINICAL SIGNS:
+   python -m app.cli search fever
+
+2. AUTOCOMPLETE:
+   python -m app.cli autocomplete lam
+
+3. SUBMIT REPORT:
+   python -m app.cli report COW001 Ngaoundere "High fever" --signs "fever"
+
+4. LIST LOCATIONS:
+   python -m app.cli locations
+
+5. GET HELP:
+   python -m app.cli --help
+
+========================================
+EXAMPLES TO COPY-PASTE:
+========================================
+
+# Search for "fever"
+python -m app.cli search fever
+
+# Search for "lameness" with limit
+python -m app.cli search lam --limit 5
+
+# Get autocomplete for "swell"
+python -m app.cli autocomplete swell
+
+# Submit report with clinical signs
+python -m app.cli report COW001 Ngaoundere "High fever" --signs "fever,nasal discharge" --severity 3
+
+# List all locations
+python -m app.cli locations
+
+========================================
+TROUBLESHOOTING:
+========================================
+
+If "python" doesn't work, try:
+  py -m app.cli search fever
+
+If you get import errors:
+  pip install typer
+
+========================================
